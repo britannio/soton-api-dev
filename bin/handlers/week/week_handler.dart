@@ -7,6 +7,7 @@ class WeekHandler implements BaseHandler {
 
   @override
   Future<shelf.Response> handle(shelf.Request request) async {
+    // TODO add support for future semesters
     final startOfTerm = DateTime(2021, 1, 4);
     final now = DateTime.now();
     final daysSinceStartOfTerm = now.difference(startOfTerm).inDays;

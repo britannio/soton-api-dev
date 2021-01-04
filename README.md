@@ -5,15 +5,8 @@ Created from templates made available by Stagehand under a BSD-style
 
 ---
 
-https://firebase.google.com/docs/dynamic-links/create-manually
-
 # Setup
 
 `cd bin`
 
 `dart server.dart`
-
-
-# Deployment
-
-`sh deploy.sh`
