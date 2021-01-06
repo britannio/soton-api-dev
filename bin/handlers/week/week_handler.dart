@@ -11,8 +11,10 @@ class WeekHandler implements BaseHandler {
     final startOfTerm = DateTime(2021, 1, 4);
     final now = DateTime.now();
     final daysSinceStartOfTerm = now.difference(startOfTerm).inDays;
+    print('daysSinceStartOfTerm: $daysSinceStartOfTerm');
 
-    final weeksSinceStartOfTerm = (daysSinceStartOfTerm / 7).ceil();
+    final weeksSinceStartOfTerm = daysSinceStartOfTerm ~/ 7;
+    print('weeksSinceStartOfTerm: $weeksSinceStartOfTerm');
     final offset = 11;
     return shelf.Response.ok('${weeksSinceStartOfTerm + 1 + offset}');
   }
